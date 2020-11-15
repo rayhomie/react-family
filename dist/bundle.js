@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("console.log('object');\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("var func = function func(str) {\n  document.getElementById('app').innerHTML = str;\n};\n\nfunc('我现在在使用Babel!');\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
