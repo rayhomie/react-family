@@ -17,5 +17,8 @@ module.exports = {
       use: ['babel-loader?cacheDirectory=true'],
       include: path.join(__dirname, 'src')
     }]
+  },
+  devServer: {//使用本地开发服务器，解决react-router不能正常跳转
+    contentBase: path.join(__dirname, './dist')
   }
 };
