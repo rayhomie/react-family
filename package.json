@@ -4,7 +4,8 @@
   "description": "react从零搭建脚手架",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-build": "webpack --config webpack.dev.config.js"
   },
   "author": "rayhomie",
   "license": "ISC",
