@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev-build": "webpack --config webpack.dev.config.js"
+    "dev-build": "webpack --config webpack.dev.config.js",
+    "view": "node view.js",
+    "env": "env"
   },
   "author": "rayhomie",
   "license": "ISC",
