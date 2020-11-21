@@ -2,7 +2,10 @@ const path = require('path');
 
 module.exports = {
   /*入口*/
-  entry: path.join(__dirname, 'src/index.js'),
+  entry: [
+    'react-hot-loader/patch',
+    path.join(__dirname, 'src/index.js')
+  ],
   /*输出到dist文件夹，输出文件名字为bundle.js*/
   output: {
     path: path.join(__dirname, './dist'),
@@ -19,6 +22,9 @@ module.exports = {
     }]
   },
   devServer: {//使用本地开发服务器，解决react-router不能正常跳转
-    contentBase: path.join(__dirname, './dist')
+    port: 8080,//设置端口号
+    contentBase: path.join(__dirname, './dist'),//告诉服务器从哪里提供内容。只有在你想要提供静态文件时才需要。
+    historyApiFallback: true,//解决强刷404问题
+    host: '0.0.0.0'//修改host
   }
 };
