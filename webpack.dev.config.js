@@ -26,5 +26,10 @@ module.exports = {
     contentBase: path.join(__dirname, './dist'),//告诉服务器从哪里提供内容。只有在你想要提供静态文件时才需要。
     historyApiFallback: true,//解决强刷404问题
     host: '0.0.0.0'//修改host
+  },
+  resolve: {
+    alias: {//设置别名
+      '@': path.join(__dirname, 'src')
+    }
   }
 };
